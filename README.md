@@ -6,7 +6,7 @@ O simulador tem como propósito testar a capacidade do usuário de reconhecer e-
 
 # 📱 Acesse agora!
 Você pode testar o simulador diretamente pelo link abaixo:
-👉 [[Clique aqui para acessar oSimulador de Phishing](https://simulador-phishingnetlifyapp.netlify.app/)
+👉[Clique aqui para acessar oSimulador de Phishing](https://simulador-phishingnetlifyapp.netlify.app/)
 
 # 🚀 Funcionalidades
 

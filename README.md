@@ -19,7 +19,9 @@ Interface simples e intuitiva, ideal para treinamentos corporativos ou educacion
 # 🛠️ Tecnologias Utilizadas
 
 HTML: Estrutura da página.
+
 CSS: Estilização e layout responsivo.
+
 JavaScript: Lógica de interação e validação das escolhas.
 
 # 📚 Dicas de Segurança Apresentadas

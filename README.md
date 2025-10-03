@@ -4,6 +4,10 @@ Este projeto é um simulador de phishing interativo desenvolvido com HTML, CSS e
 # 🎯 Objetivo
 O simulador tem como propósito testar a capacidade do usuário de reconhecer e-mails suspeitos. Ao interagir com o sistema, o usuário deve escolher entre diferentes opções de e-mails. Dependendo da escolha, o sistema fornece feedback educativo.
 
+# 📱 Acesse agora!
+ocê pode testar o simulador diretamente pelo link abaixo:ocê pode testar o simulador diretamente pelo link abaixo:
+👉 [Clique aqui para acessar oSimulador de Phishing
+
 # 🚀 Funcionalidades
 
 Exibição de múltiplas opções de e-mails (simulados).

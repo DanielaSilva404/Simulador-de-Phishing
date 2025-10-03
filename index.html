@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Phishing</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- TELA INICIAL: introdução e botão iniciar -->
+  <div id="tela-inicial" class="tela">
+    <h1>Simulador de Phishing</h1>
+    <p>Aprenda a identificar e reagir a e‑mails maliciosos</p>
+    <button id="btn-iniciar">Iniciar Simulação</button>
+  </div>
+
+  <!-- TELA SIMULAÇÃO: escolha de e-mails -->
+  <div id="tela-simulacao" class="tela" style="display: none;">
+    <button id="btn-voltar" class="btn-voltar" aria-label="Voltar">← Voltar</button>
+
+    <h2>Escolha um e‑mail que pareça seguro</h2>
+
+    <div class="emails">
+      <div class="email-box">
+        <button class="email-opcao" data-idx="0">E-mail 1- suporte.tecnologia@novabyte.com</button>
+        <img src="/imagens/email1.png" alt="Preview Email 1" class="preview-img" data-idx="0" />
+      </div>
+
+      <div class="email-box">
+        <button class="email-opcao" data-idx="1">E-mail 2- recursos.humanos@datamosaic.com</button>
+        <img src="/imagens/email2.png" alt="Preview Email 2" class="preview-img" data-idx="1" />
+      </div>
+
+      <div class="email-box">
+        <button class="email-opcao" data-idx="2">E-mail 3- account@rnicrosoft.com</button>
+        <img src="/imagens/email3.png" alt="Preview Email 3" class="preview-img" data-idx="2" />
+      </div>
+    </div>
+  </div>
+
+  <!-- TELA RESULTADO: "Parabéns" e ações (oculta por padrão) -->
+  <div id="tela-resultado" class="tela" style="display: none;">
+    <button id="btn-voltar-resultado" class="btn-voltar" aria-label="Voltar para simulação">← Voltar</button>
+
+    <!-- Texto "Parabéns"-->
+    <h1 class="parabens">Parabéns!</h1>
+    <p>Você identificou corretamente o e‑mail. Excelente!</p>
+
+    <!-- Ações centralizadas -->
+    <div class="acoes-resultado">
+      <button id="btn-repetir" class="sim-btn sim-btn-primary">Tentar novamente</button>
+      <button id="btn-sair" class="sim-btn sim-btn-secondary">Sair</button>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>

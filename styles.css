@@ -1,0 +1,245 @@
+/*RESET BÁSICO*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+/*CORPO E FUNDO*/
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  background-image: url('https://t3.ftcdn.net/jpg/07/14/74/74/360_F_714747406_Kj3mgCcPYIpDDnlAHSh5B4bWZsfiCugT.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/*CONTAINER BASE (TELA)*/
+.tela {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center; 
+  padding: 24px;
+  background: rgba(60, 209, 194, 0.12); 
+  backdrop-filter: blur(5px);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+  position: relative;
+}
+
+/* título, subtítulo e parágrafo */
+h1 { font-size: 28px; margin-bottom: 8px; }
+h2 { font-size: 20px; margin-bottom: 16px; }
+p  { font-size: 16px; opacity: 0.95; }
+
+/* se o modal tiver a classe "legit", deixa o título verde */
+.sim-modal-dialog.legit .sim-modal-title {
+  color: #00FF66 !important;
+}
+
+/* se o modal tiver a classe "phishing", deixa o título vermelho */
+.sim-modal-dialog.phishing .sim-modal-title {
+  color: #b71c1c !important;
+}
+
+/* BOTÕES PADRÃO */
+button {
+  margin-top: 16px;
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #0f524d, #3cd1c2);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  transition: transform .12s;
+}
+button:active { transform: scale(0.98); }
+button:hover  { transform: scale(1.03); }
+
+/* botão voltar fixo */
+.btn-voltar {
+  top: 20px;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 22px;
+  background: #2c645f;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.btn-voltar:hover { 
+  background: #3cd1c2; 
+  color: #1a6963; 
+}
+
+/*CARDS DE E-MAIL*/
+.emails {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 8px;
+}
+.email-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 300px;
+  max-width: 90%;
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform .12s, box-shadow .12s;
+}
+.email-box:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.22); }
+
+.preview-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.email-opcao {
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* Garante altura flexível para centralização vertical */
+}
+
+/* centraliza ações da tela de resultado */
+.acoes-resultado {
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* centraliza os botões */
+  margin-top: 14px;
+}
+
+/*RESPONSIVIDADE SIMPLES*/
+@media (max-width: 900px) { .email-box { width: 45%; } }
+@media (max-width: 600px) {
+  h1 { font-size: 22px; }
+  .email-box { width: 92%; }
+  .btn-voltar { top: 10px; left: 10px; padding: 8px 12px; }
+}
+
+/*MODAL*/
+.sim-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+.sim-modal-dialog {
+  width: min(760px, 96%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+/* Conteúdo do modal: títulos e parágrafos */
+.sim-modal-content {
+  width: 100%;
+  max-width: 90%; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sim-modal-content h3 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #04463f;
+  /* Centraliza os subtítulos h3 */
+  text-align: center;
+}
+.sim-modal-content p, .sim-modal-content li {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #000;
+  /* Centraliza parágrafos e itens de lista */
+  text-align: center;
+  margin: 0 auto; /* Centraliza blocos de texto */
+  max-width: 100%; /* Limita largura para melhor leitura */
+}
+.sim-modal-content ol {
+  list-style: decimal;
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+  display: block;
+  margin: 0 auto; /* Centraliza a lista como um todo */
+  width: fit-content; /* Largura automática */
+  max-width: 80%; /* Limita para não esticar demais */
+  text-align: left; /* Mantém o texto da lista alinhado à esquerda para legibilidade */
+}
+.sim-modal-content ol li { 
+  margin-bottom: 8px;
+  text-align: left; /* Garante que itens da lista fiquem à esquerda dentro do bloco centralizado */
+}
+
+/* classes de destaque no conteúdo do modal */
+.sim-strong { font-weight: 700; margin-bottom: 8px; }
+.sim-danger { color: #b71c1c; }           /* perigo */
+.sim-success { color: #00FF66; }          /* sucesso = verde vibrante */
+
+/* botões do modal (ações) */
+.sim-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center; 
+  margin-top: 14px;
+  flex-wrap: wrap;
+  width: 100%; 
+}
+.sim-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+.sim-btn-primary {
+  background: linear-gradient(135deg, #0f524d, #3cd1c2);
+  color: #fff;
+}
+.sim-btn-secondary {
+  background: #e0e0e0;
+  color: #111;
+}
+
+/* responsividade do modal */
+@media (max-width: 480px) {
+  .sim-modal-dialog { padding: 14px; }
+  .sim-modal-title { font-size: 18px; }
+  .sim-modal-content p, .sim-modal-content li { font-size: 13px; max-width: 95%; } 
+  .sim-modal-content ol { max-width: 95%; } 
+  .sim-modal-actions { justify-content: center; } 
+}

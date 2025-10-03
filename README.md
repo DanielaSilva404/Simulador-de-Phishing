@@ -27,7 +27,11 @@ JavaScript: Lógica de interação e validação das escolhas.
 # 📚 Dicas de Segurança Apresentadas
 
 Verifique o remetente do e-mail.
+
 Desconfie de mensagens com senso de urgência.
+
 Nunca clique em links suspeitos.
+
 Utilize autenticação em dois fatores.
+
 Mantenha seu antivírus atualizado.

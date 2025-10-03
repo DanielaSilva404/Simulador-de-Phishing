@@ -1,4 +1,4 @@
-#🛡️ Simulador de Phishing
+#**🛡️ Simulador de Phishing**#
 Este projeto é um simulador de phishing interativo desenvolvido com HTML, CSS e JavaScript, com o objetivo de educar usuários sobre segurança digital e como identificar e evitar ataques de phishing.
 
 #🎯 Objetivo

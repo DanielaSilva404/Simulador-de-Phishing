@@ -10,6 +10,7 @@ Exibição de múltiplas opções de e-mails (simulados).
 Validação da escolha do usuário:
 
 ✅ Se o usuário escolher o e-mail correto (não phishing), uma mensagem de parabéns é exibida junto com dicas de segurança.
+
 ❌ Se o usuário escolher um e-mail falso (phishing), uma mensagem informa que ele precisa realizar um treinamento de 3 horas sobre segurança digital.
 
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Phishing</title>
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Tela inicial com título, descrição e botão para iniciar -->
+  <div id="tela-inicial" class="tela centralizada">
+    <h1>Simulador de Phishing</h1>
+    <p>Aprenda a identificar e reagir a e‑mails maliciosos</p>
+    <button id="btn-iniciar">Iniciar Simulação</button>
+  </div>
+
+  <!-- Tela de simulação com opções de e-mails -->
+  <div id="tela-simulacao" class="tela centralizada" style="display: none;">
+    <button id="btn-voltar" class="btn-voltar" aria-label="Voltar">← Voltar</button>
+
+    <h2>Escolha um e‑mail que pareça seguro</h2>
+
+    <div class="emails">
+      <!-- Opção 1: e-mail suspeito -->
+      <div class="email-box">
+        <button class="email-opcao" data-idx="0">E-mail 1 - suporte.tecnologia@novabyte.com</button>
+        <img src="./imagens/email1.png" alt="Visual do Email 1" class="preview-img" />
+      </div>
+
+      <!-- Opção 2: e-mail legítimo -->
+      <div class="email-box">
+        <button class="email-opcao" data-idx="1">E-mail 2 - recursos.humanos@empresa.com</button>
+        <img src="./imagens/email2.png" alt="Visual do Email 2" class="preview-img" />
+      </div>
+
+      <!-- Opção 3: e-mail malicioso adicional -->
+      <div class="email-box">
+        <button class="email-opcao" data-idx="2">E-mail 3 - atendimento@seguranca-alerta.com</button>
+        <img src="./imagens/email3.png" alt="Visual do Email 3" class="preview-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Tela de resultado com feedback e botão para voltar à simulação -->
+  <div id="tela-resultado" class="tela centralizada" style="display: none;">
+    <h2>Resultado da sua escolha</h2>
+    <div id="resultado-conteudo"></div>
+
+    <div class="acoes-resultado">
+      <button id="btn-voltar-resultado">Voltar à Simulação</button>
+    </div>
+  </div>
+
+  <!-- Inclusão do script principal -->
+  <script src="./script.js"></script>
+</body>
+</html>
